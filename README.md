@@ -33,9 +33,9 @@
 
 # Replit IDE (เเนะนำ)
 **วิธีใช้** 
-1) เข้าลิ้ง : [Replit]() 
+1) เข้าลิ้ง : [Replit](https://replit.com/github/ImJustNon/Kwanbotproject) 
 2) เข้า "Folder data" เเละ เเก้ ไฟล์ ` setting.js `
-3) ในไฟล์ `setting.js ` ให้เเก้ 1.token 2.client ID 3.Username 4.prefix 5.เห็นไรที่มันไม่ตรงหรือเป็นข้อมูลเก่าก็เเก้โลด
+3) ในไฟล์ ` setting.js ` ให้เเก้ 1.token 2.client ID 3.Username 4.prefix 5.เห็นไรที่มันไม่ตรงหรือเป็นข้อมูลเก่าก็เเก้โลด
 4) กดปุ่ม ` RUN ` ด้านบน เเละรอจนกว่าจะขึ้น load Succes
 5) เอาบอทเข้า server : https://discord.com/api/oauth2/authorize?client_id=1️⃣&permissions=2️⃣&scope=bot
    - 1️⃣ = clientID ตัวอย่าง = 884786761635627150 
