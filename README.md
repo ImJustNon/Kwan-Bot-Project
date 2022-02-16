@@ -4,13 +4,15 @@
 
 ## 📸 พรีวิว
 
-![]()
+![](https://cdn.discordapp.com/attachments/933667577207611402/943392473642827786/unknown.png)
 
-![]()
+![](https://cdn.discordapp.com/attachments/933667577207611402/943392792611258388/unknown.png)
 
-![]()
+![](https://cdn.discordapp.com/attachments/933667577207611402/943393063567495229/unknown.png)
 
-เชิญบอทเข้าเซิฟเวอร์ [✨ M i K U 🎧#1031](https://discord.com/api/oauth2/authorize?client_id=884786761635627150&permissions=140164582464&scope=bot)
+![](https://cdn.discordapp.com/attachments/933667577207611402/943398083855802449/unknown.png)
+
+เชิญบอทเข้าเซิฟเวอร์ [✨ Kwan 💕#0111](https://kwan-0111.netlify.app/home)
 
 # Host windows
 **❗ ต้องการ**
@@ -45,7 +47,7 @@
 6) พิมพ์คำสั่ง help ได้เลย!!
 
 
-**NOTE** : ถ้าใช้ ` yarn install ` ไม่ได้ให้เข้าไปโหลดในลิ้งนี้ [node-module download](https://drive.google.com/drive/folders/1POrt9Owsp2yrt9wj0QnWCfjCs-wbZVqT?usp=sharing) เเละนำไฟล์ "node-module" ไปวาง
+**NOTE** : ถ้าใช้ ` yarn install ` ไม่ได้ให้เข้าไปโหลดในลิ้งนี้ [node-module download](https://drive.google.com/drive/folders/1sB6Ym1ny0AuM_bZHqs88tzCA_tuUjiK1?usp=sharing) เเละนำไฟล์ "node-module" ไปวาง
 
 
 **สร้างบอท**
