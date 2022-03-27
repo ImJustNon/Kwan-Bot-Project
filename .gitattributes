@@ -1,0 +1,7 @@
+*.javascript linguist-detectable=true
+*.batch linguist-detectable=true
+*.html linguist-detectable=true
+*.css linguist-detectable=true
+*.java linguist-detectable=true
+*.json linguist-detectable=true
+*.typescript linguist-detectable=true
