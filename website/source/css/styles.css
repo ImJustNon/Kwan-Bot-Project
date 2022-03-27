@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Open+Source+Sans|Electrolize|Titillium+Web|Quantico|Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@1,500&family=Sriracha&display=swap');
+
+/* General */
+
+* {
+	box-sizing: border-box;
+	color: rgb(229, 47, 253);
+	cursor: none;
+}
+
+body {
+	/* background-color: #0A0909; */
+	/* background-color: #292D32;  */
+	background-color: #23272A;
+	/* background-color: #201F1F; */
+	background: url("https://cdn.discordapp.com/attachments/933667577207611402/942407489692004442/cool-background.png") no-repeat center fixed; 
+	background-size: cover;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-size: 20px;
+	color: white;
+	font-family: 'Sriracha', cursive;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 4px solid rgb(252, 252, 252);
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 50ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(250, 13, 131);
+}
+
+ul {
+	width: 55%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+body, html {
+	height: 100%
+}
+
+table {
+	color: #a9a8a8
+}
+
+section h1 {
+	background-color: transparent;
+	color: rgb(229, 47, 253)
+}
+
+p {
+	color: #8d85ff;
+	font-size: 0.8em;
+	font-family: 'Mali', cursive;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	margin-left: 0.4em;
+}
+
+footer {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 2em;
+	color: #a9a8a8;
+	background-color: rgb(32, 31, 31);
+}
+
+p {
+	font-size: 4em;
+}
+
+img {
+	display: inline;
+}
+
+figure {
+	display: inline;
+}
+
+.threejs {
+	background-image: url("../media/skyscraper3js.gif");
+	background-repeat: cover
+}
+
+h2 {
+	font-size: 20px;
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: #fff;
+	margin-top: 2em;
+	padding: 1em;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+img {
+	max-width: 80%;
+}
+
+#particle-canvas {
+	width: 100%;
+	height: 100%;
+}
+
+#vertical, nav, #landing {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#landing {
+	min-height: 90vh;
+}
+
+.iconAnimation img {
+	visibility: hidden;
+}
+
+.icons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.panel {
+	text-align: center;
+	position: relative;
+	min-width: 100%;
+	min-height: 70vh;
+}
+
+#wrapper .scrollContent, #wrapper.horizontal .scrollContent {
+	font-size: 0;
+}
+
+#wrapper .scrollContent div, section, footer {
+	font-size: 13px;
+}
+
+small {
+	font-size: 0.5em;
+}
+
+section#titlechart {
+	text-align: center;
+	position: relative;
+	min-width: 100%;
+	min-height: 50vh;
+	display: grid;
+}
+
+nav ul li {
+	list-style: none;
+	padding-right: 0.5em;
+	font-size: 0.8em;
+}
+
+#vertical ul li {
+	font-size: 1.5em;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	text-align: centre;
+	max-width: 100%;
+}
+
+td {
+	text-align: right;
+	padding: 0.5em;
+}
+
+th {
+	text-align: center;
+}
+
+td, th {
+	vertical-align: middle;
+	border: 1px solid #a9a8a8;
+	color: #a9a8a8
+}
+
+/* Zebra-striping the table */
+
+tr:nth-of-type(odd) {
+	color: black;
+}
+
+#developers {
+	background-image: url("../GIFs/code_background.gif")
+}
+
+nav ul li a:hover {
+	background-color: transparent;
+	color: #8d85ff;
+}
+
+#vertical a {
+	background-color: transparent;
+	color: #ff00b3;
+	font-size: 1.3em;
+}
+
+.code {
+	background-image: url("../GIFs/git_background.gif")
+}
+
+#developers {
+	background-image: url("../GIFs/code_background.gif")
+}
+
+#git {
+	background-image: url("../media/git_background.gif");
+	background-repeat: no-repeat;
+}
+
+#chat {
+	background-image: url("../media/chat2.gif")
+}
+
+/* CSS Animations */
+
+#animate1 {
+	transition: transform 0.3s ease-out;
+}
+
+.zap {
+	transform: scale(2.5, 0);
+}
+
+.box1 {
+	display: inline-block;
+	position: relative;
+	border-radius: 8px;
+	border: 0px solid white;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0 5px;
+}
+
+.box1 {
+	min-width: 100px;
+	height: 100px;
+	margin: 0 auto 0 auto;
+}
+
+/* GRID LAYOUT FOR LANDING PANE */
+
+@media screen and (min-width: 20em) {
+	nav ul li {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: vertical;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 3em;
+	}
+}
+
+/* GRID LAYOUT FOR LANDING PANE */
+
+@media screen and (min-width: 40em) {
+	#landing {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 35% 65%;
+		grid-template-rows: auto;
+		grid-template-areas: "middle-left middle-right" "end1 end1"
+	}
+	#vertical {
+		grid-area: middle-left;
+	}
+	#vertical article {
+		grid-area: middle-right;
+	}
+
+	header {
+		display: grid;
+		position: sticky;
+		grid-template-columns: 30% 70%;
+		grid-template-areas: "top-left top-right"
+	}
+	table {
+		grid-area: middle-right1
+	}
+	nav {
+		grid-area: top-right;
+	}
+	.logo {
+		grid-area: top-left;
+	}
+	nav ul li {
+		display: inline;
+	}
+	.panel {
+		display: grid;
+		grid-template-columns: 65% 35%;
+		grid-template-areas: "left1 right1"
+	}
+	.panel figure {
+		grid-area: left1;
+	}
+	.panel article {
+		grid-area: right1;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.flex_items article, .flex_items1 article {
+		display: inline-block;
+	}
+	.flex_items article {
+		width: calc(100% * (1/6) - 10px - 1px);
+	}
+	footer {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 65% 35%;
+		grid-template-rows: auto;
+		grid-template-areas: "fleft fright"
+	}
+	footer p {
+		grid-area: fleft;
+	}
+	footer ul {
+		grid-area: fright;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	footer ul a {
+		margin: 0;
+		padding: 0;
+		padding-left: 1.1em;
+		text-decoration: underline;
+	}
+}
+
+iframe {
+	max-width: 100%;
+}
+
+.media_container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: auto;
+	max-width: 100%;
+	padding: auto;
+}
+
+.media_container article {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+section.panel.white {
+	color: black
+}
+
+.blue {
+	background-color: #1D1F21
+}
+
+.turqoise {
+	background-color: #23272A;
+}
+
+.panel.blue p {
+	color: black;
+}
+
+.brown {
+	background-color: #a66f28;
+}
+
+.black {
+	background-color: #000000;
+}
+
+.dark {
+	background-image: url("../media/chat2.gif");
+}
+
+.white {
+	background-color: #292D32;
+}
+
+.red {
+	background-color: #cf3535;
+}
+
+.green {
+	background-color: #22d659;
+}
+
+.orange {
+	background-color: #ea6300;
+}
+
+.red {
+	background-image: url("../media/threejs_website.gif");
+}
+
+article {
+	box-sizing: border-box;
+}
+
+.flex_items, .flex_items1 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.flex_items article, .flex_items1 {
+	border: solid #af02ff 0.2em;
+	padding: 3em;
+	margin: 1em;
+	list-style: none;
+}
+
+.flex_items ul li p {
+	background-image: url("../media/circlegraph1.png")
+}
+
+.flex_items h1 {
+	display: block;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.bordeaux {
+	background-color: #23272A;
+}
+
+#dark_theme_animation {
+	color: black;
+	background-color: white;
+}
+
+article h1 {
+	background-color: transparent;
+	color: #ff00b3;
+	font-size: 2.2em;
+}
+
+article p {
+	font-size: 1em;
+}
+
+#commands h1 {
+	background-color: black;
+	font-size: 1.5em;
+}
+
+section article {
+	margin-right: 3em;
+}
+
+#seo {
+	background-image: url("../media/linegraph.png")
+}
+
+#chat_silvia {
+	background-image: url("../media/silvia_discord3.PNG")
+}
+
+#discord_animation {
+	background-image: url("../media/silvia_discord1.png")
+}
+
+#physics_undefined {
+	background-image: url("../media/physics_undefined.gif")
+}
+
+#memes {
+	background-image: url("../GIFs/meme_example.gif")
+}
+
+#animate1 {
+	transition: transform 0.3s ease-out;
+}
+
+#dev {
+	background-image: url("../GIFs/linegraph.png")
+}
+
+#onyxlabs {
+	background-image: url("../GIFs/background.gif")
+}
+
+.mono {
+	font-family: "Electrolize", sans-serif;
+}
+
+.logo {
+	padding: 0em;
+	margin: 0em;
+}
+
+.onxlbs {
+	font-family: "Electrolize", sans-serif;
+	text-shadow: 0px 0px 5px #0ff;
+	color: black;
+	font-size: 2.7em;
+}
+
+.scifi {
+	background-color: black;
+}
+
+.cityscape {
+	background-image: url("../media/cityscape.jpg")
+}
+
+.iframe p {
+	background-color:  #11ffee00;
+}

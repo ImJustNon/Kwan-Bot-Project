@@ -1,0 +1,95 @@
+2022-03-18 10:57:37.522  INFO 13040 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            17.0.2
+	Lavaplayer      1.3.96-original
+
+2022-03-18 10:57:37.751  INFO 13040 --- [main] lavalink.server.Launcher                 : Starting Launcher on DESKTOP-PKD3NJ9 with PID 13040 (C:\Users\Im_Ju\Desktop\Lavalink\Lavalink.jar started by Im_Ju in C:\Users\Im_Ju\Desktop\Lavalink)
+2022-03-18 10:57:37.752  INFO 13040 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2022-03-18 10:57:37.898  WARN 13040 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-03-18 10:57:40.187  WARN 13040 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2022-03-18 10:57:40.217  INFO 13040 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2022-03-18 10:57:40.218  INFO 13040 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2383 ms
+2022-03-18 10:57:40.882  WARN 13040 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2022-03-18 10:57:41.424  INFO 13040 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2022-03-18 10:57:41.799  INFO 13040 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2022-03-18 10:57:41.800  WARN 13040 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2022-03-18 10:57:42.274  INFO 13040 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-03-18 10:57:42.845  INFO 13040 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2022-03-18 10:57:42.866  INFO 13040 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2022-03-18 10:57:42.990  INFO 13040 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2022-03-18 10:57:43.006  INFO 13040 --- [main] lavalink.server.Launcher                 : Started Launcher in 6.528 seconds (JVM running for 7.349)
+2022-03-18 10:57:43.009  INFO 13040 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2022-03-18 10:59:30.498  INFO 13040 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-18 10:59:30.499  INFO 13040 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-18 10:59:30.509  INFO 13040 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-03-18 10:59:30.538  INFO 13040 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53496
+2022-03-18 10:59:30.653  INFO 13040 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 10:59:30.654  WARN 13040 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 10:59:48.628  INFO 13040 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://www.youtube.com/watch?v=dytvU-Z-H1k&list=RDdytvU-Z-H1k&start_radio=1"
+2022-03-18 10:59:50.238  INFO 13040 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Mix - ?????????? - SERIOUS BACON [ Official MV ]
+2022-03-18 10:59:50.316  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAogIAPuC5hOC4oeC5iOC4reC4ouC4suC4geC4n+C4seC4hyAtIFNFUklPVVMgQkFDT04gWyBPZmZpY2lhbCBNViBdAApCT1hYIE1VU0lDAAAAAAAE3hgAC2R5dHZVLVotSDFrAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9ZHl0dlUtWi1IMWsAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"797067285016739862"}
+2022-03-18 10:59:50.815  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"64e8f979129489cc1a28ded246948a11","event":{"token":"4af5e8f7d1ea4450","guild_id":"797067285016739862","endpoint":"singapore10078.discord.media:443"},"op":"voiceUpdate","guildId":"797067285016739862"}
+2022-03-18 11:05:12.391  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAvgIAWuC4nuC4teC5iOC5hiDguJXguLHguJTguYHguKfguYjguJnguYPguKvguYnguKvguJnguYjguK3guKIgLSBTRVJJT1VTIEJBQ09OIFsgT2ZmaWNpYWwgTVYgXQAKQk9YWCBNVVNJQwAAAAAAA9xIAAtLV2hJYXl0V3NtcwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUtXaElheXRXc21zAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:09:26.164  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAA6QIAfuC4leC5ieC4reC4h+C5guC4l+C4qeC4lOC4suC4pyAtIOC4reC4tOC5ieC4h+C4hOC5jCDguKfguKPguLHguJnguJjguKMgfCBUaGUgV2FsbCBTb25nIOC4o+C5ieC4reC4h+C4guC5ieC4suC4oeC4geC4s+C5geC4nuC4hwARV29ya3BvaW50T2ZmaWNpYWwAAAAAAASzIAALcDlIVGFuWXJBQ28AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1wOUhUYW5ZckFDbwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:14:34.793  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAuQIAV+C4luC5ieC4suC5gOC4o+C4suC5gOC4iOC4reC4geC4seC4meC4reC4teC4gSAtIFRpbGx5IEJpcmRzIHwgQ2luZW1hdGljIFZpcnR1YWwgQ29uY2VydAAIR2VuZSBMYWIAAAAAAAS3CAALTFlhVHhXMG1iZGsAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1MWWFUeFcwbWJkawAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:19:45.207  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAA4wIAhOOAkE9GRklDSUFMIE1W44CR4oCc4Lie4Li04LiH4oCdIFvguYDguJ7guKXguIfguIjguLLguIHguKXguLDguITguKPguIHguKPguLDguYDguIrguYnguLLguKrguLXguJTguLJdIC0g4LiZ4LiZ4LiX4LmMIOC4mOC4meC4meC4l+C5jAAFb25lMzEAAAAAAAO1OAALLXRDUHVPSWVTSG8AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0tdENQdU9JZVNIbwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:23:49.210  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAA0gIAbuC5hOC4oeC5iOC4reC4ouC4suC4geC5gOC4m+C5h+C4meC5gOC4nuC4t+C5iOC4reC4meC4geC4seC4muC5geC4n+C4meC5gOC4geC5iOC4siAtIEJFQU4gTkFQQVNPTiBbT2ZmaWNpYWwgTVZdAApCT1hYIE1VU0lDAAAAAAAEzngAC1dReHVwYVVPSnJRAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9V1F4dXBhVU9KclEAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:29:05.380  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAwwIAX+C4iOC4sOC4geC4peC4seC4muC5hOC4m+C4lOC4teC4geC4seC4muC5gOC4guC4suC4geC5h+C4muC4reC4gSAtIFNFUklPVVMgQkFDT04gWyBPZmZpY2lhbCBNViBdAApCT1hYIE1VU0lDAAAAAAADqYAAC3NZZ1ZDdXY3YzFnAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9c1lnVkN1djdjMWcAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:33:06.129  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAApwIASDE3IOC4meC4suC4l+C4tSAoMTcgbWlucykgLSBNSUxMSSBmdC4gbWludHMgKFByb2QuIGJ5IFNwYXRDaGllcykgfCBZVVBQIQAFWVVQUCEAAAAAAAPQkAALcURyTURGaFRkVHcAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1xRHJNREZoVGRUdwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:37:16.856  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAA0wIAdeC4leC4geC4q+C4peC4uOC4oeC4o+C4seC4geC4o+C4reC4muC4l+C4teC5iOC4peC5ieC4suC4mSAobG92ZSB1IDFtKSBsIEtpbmthd29ybiB4IEJlbGwgV2FyaXNhcmHjgIxPZmZpY2lhbCBWaWRlb+OAjQAEbWFycgAAAAAAAwGIAAthbzNWSFFMY3JSSQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWFvM1ZIUUxjclJJAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:40:34.371  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAywIAaOC4lOC4tuC4h+C4lOC4seC4mSAtIENPQ0tUQUlMIFgg4LiV4Lix4LmK4LiBIOC4qOC4tOC4o+C4tOC4nuC4oyAoSk9PWCAxMDB4MTAwIFNFQVNPTiAyKeOAjE9mZmljaWFsIE1W44CNAAlHZW5pZXJvY2sAAAAAAATGqAALQVpfdDlpQUpSRHcAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1BWl90OWlBSlJEdwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:45:49.330  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAvgIAUuC4q+C5ieC4suC4oeC5g+C4iOC5hOC4oeC5iOC4reC4ouC4ueC5iChpcyBpdCB5b3U/KSAtIEVhcnRoIFBhdHJhdmVlIFtPZmZpY2lhbCBNVl0AEk11emlrIE1vdmUgUmVjb3JkcwAAAAAAA36IAAtNRm5LbTZhQjkzOAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PU1GbkttNmFCOTM4AAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:49:39.328  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAArgIASuC5hOC4oeC5iOC4oeC4teC5geC4peC5ieC4p+C5gOC4o+C4siAoRW5kaW5nKSAtIEZBSSBQQVRUSEFZQSBbT2ZmaWNpYWwgTVZdAApCT1hYIE1VU0lDAAAAAAAD0JAAC3RGanVmQXRFN09NAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9dEZqdWZBdEU3T00AB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:53:50.822  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAogIAPUJPV0tZTElPTiAtIOC4muC4suC4meC4m+C4peC4suC4oiAoYmVzdCB3aXNoZXMpIFtPZmZpY2lhbCBNVl0AC1doYXR0aGVkdWNrAAAAAAAE3hgAC1J6dHRBU1ZSSEFJAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Unp0dEFTVlJIQUkAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"797067285016739862"}
+2022-03-18 11:59:10.475  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAmgIANuC4p+C4seC4h+C4p+C4mSAtIFNFUklPVVMgQkFDT04gKCBPUklHSU5BTCBieSBPTkVPTkUgKQAKQk9YWCBNVVNJQwAAAAAABEmoAAtzdnRXeV9leFNoYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXN2dFd5X2V4U2hjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"797067285016739862"}
+2022-03-18 12:03:52.327  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAA2AIAdOC4reC4ouC4suC4geC5gOC4o+C4tOC5iOC4oeC4leC5ieC4meC5g+C4q+C4oeC5iOC4geC4seC4muC4hOC4meC5gOC4lOC4tOC4oSAoUkVQRUFUKSAtIElOSyBXQVJVTlRPUk4gWyBPZmZpY2lhbCBNViBdAApCT1hYIE1VU0lDAAAAAAAEtwgAC0lTNlo2MWh0MlA4AAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9SVM2WjYxaHQyUDgAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"797067285016739862"}
+2022-03-18 12:04:26.315  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53496 -- CloseStatus[code=1006, reason=]
+2022-03-18 12:04:26.316  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2022-03-18 12:16:31.869  INFO 13040 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59828
+2022-03-18 12:16:31.881  INFO 13040 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 12:16:31.882  WARN 13040 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 12:17:28.749  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59828 -- CloseStatus[code=1006, reason=]
+2022-03-18 12:17:28.749  INFO 13040 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 12:17:48.415  INFO 13040 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:59946
+2022-03-18 12:17:48.418  INFO 13040 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 12:17:48.419  WARN 13040 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 12:20:08.980  INFO 13040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:59946 -- CloseStatus[code=1006, reason=]
+2022-03-18 12:20:08.981  INFO 13040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 12:20:19.689  INFO 13040 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:54942
+2022-03-18 12:20:19.699  INFO 13040 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 12:20:19.702  WARN 13040 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 12:25:36.015  INFO 13040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:54942 -- CloseStatus[code=1006, reason=]
+2022-03-18 12:25:36.016  INFO 13040 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 12:46:17.054  INFO 13040 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:60701
+2022-03-18 12:46:17.060  INFO 13040 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 12:46:17.063  WARN 13040 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 13:03:15.398  INFO 13040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:60701 -- CloseStatus[code=1006, reason=]
+2022-03-18 13:03:15.399  INFO 13040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 13:03:29.326  INFO 13040 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:52309
+2022-03-18 13:03:29.334  INFO 13040 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 13:03:29.336  WARN 13040 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 13:20:57.860  INFO 13040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:52309 -- CloseStatus[code=1006, reason=]
+2022-03-18 13:20:57.861  INFO 13040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 13:21:28.622  INFO 13040 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:53279
+2022-03-18 13:21:28.627  INFO 13040 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 13:21:28.630  WARN 13040 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 13:29:28.905  INFO 13040 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:53279 -- CloseStatus[code=1006, reason=]
+2022-03-18 13:29:28.906  INFO 13040 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2022-03-18 13:29:39.440  INFO 13040 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:54625
+2022-03-18 13:29:39.446  INFO 13040 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established
+2022-03-18 13:29:39.450  WARN 13040 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Library developers: Please specify a 'Client-Name' header.
+2022-03-18 14:20:43.887  INFO 13040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:54625 -- CloseStatus[code=1006, reason=]
+2022-03-18 14:20:43.902  INFO 13040 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
