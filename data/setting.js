@@ -1,5 +1,6 @@
 module.exports = {
     mainbot:{
+<<<<<<< HEAD
         Prefix: 'k/',
         Token: '',
         Permission: '8', //150314937471
@@ -10,6 +11,16 @@ module.exports = {
         errorlogChannel: '956734858258960514',
 		online_log_channel: '957828918696628244',
 		offline_log_channel: '957828918696628244',
+=======
+        Prefix: '',
+        Token: '',
+        Permission: '', //150314937471
+        OwnerID: '',
+        ClientID: '',
+        ClientSecret: '',
+        logChannel: '',
+        errorlogChannel: '',
+>>>>>>> 14e2254d123070262659455cfeb56b6724350fd2
         embed: {
             helpthumbnail: {
                 game: 'https://cdn.discordapp.com/attachments/933667577207611402/945289748631662592/giphy.gif',
@@ -35,10 +46,10 @@ module.exports = {
         },
     },
     information: {
-        github: 'https://github.com/ImJustNon/Kwan-Bot-Project/',
-        website: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-        supportServer: 'https://discord.gg/',
-        invitelink: 'https://kwn-proj.netlify.app/invite',
+        github: '',
+        website: '',
+        supportServer: '',
+        invitelink: '',
     },
     website: {
         enable: false,
@@ -89,14 +100,14 @@ module.exports = {
         dash: ':dash:',
     },
     api: {
-        imageapi: 'bb03f373caa534fcfcbaeae177a65134f44a6e57ba7a7b098be273867b376d8a677ddae3c23c6ded4fec8288573945e8c3483689deb13f229376ad4b5b60231d',
-        youtubeapi: 'AIzaSyCxbnVT8gW9zXlw_W6E7TB8_482OhuyO38',
-        openweatherapi: '0a38b17a4892b9f20dbd92e6b13956ec',
-        imdbapi: '5e36f0db',
-        tenorapi:'0FI9ZGNW4JYA',
-        giphyapi: 'W8g6R14C0hpH6ZMon9HV9FTqKs4o4rCk',
-        somerandomapi: 'pUVCA3c0WcVj95IeXgpS0Ub6jnHdBWrc4f0Q8U753zFgr3TcEwm9DHmry8TrOy6o',
-        detectLanguageAPI: '4795a5285114d73fab5ea17bac331920',
+        imageapi: '',
+        youtubeapi: '',
+        openweatherapi: '',
+        imdbapi: '',
+        tenorapi:'',
+        giphyapi: '',
+        somerandomapi: '',
+        detectLanguageAPI: '',
     },
     music: {
         nodes: [ 
@@ -112,8 +123,8 @@ module.exports = {
         ],
         spotify: {
             enable: false, // <== have little Bug !
-            id: '14fb69255922464cbec11930cfeff379',
-            secret: '12c43dcab0b04e32a9c0719717be6bb7',
+            id: '',
+            secret: '',
             spotify_playlist_page_limit: 100,
         },
         autoplay: true,
@@ -127,8 +138,8 @@ module.exports = {
         },
     }, 
     database: {
-        mongodburl: 'mongodb+srv://LamyTheBestWaifu:9kVfgbqGDjpg0t5S@cluster0.rp8ie.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-        mongodburl2: 'mongodb+srv://Kwan-0111:LIVPbGPbI6fVLM9E@cluster0.rp8ie.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+        mongodburl: '',
+        mongodburl2: '',
     },
     image: {
         transparent: 'https://cdn.discordapp.com/attachments/933667577207611402/955762797814366308/HD_transparent_picture.png',
