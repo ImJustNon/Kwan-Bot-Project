@@ -39,6 +39,8 @@ module.exports = (bot) => {
     'captcha',
     'welcome',
     'goodbye',
+    'autorole',
+    'music',
   ].forEach(x =>{ 
     load(x)
   }); 

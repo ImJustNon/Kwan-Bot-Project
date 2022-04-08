@@ -1,7 +1,11 @@
-const { Captcha } = require('captcha-canvas');
+const { Captcha, CaptchaGenerator } = require('captcha-canvas');
 const { MessageEmbed, MessageAttachment } = require('discord.js');
 const db = require('../database/quickmongo.js');
-
+const randomColor = require('randomcolor');
+const radom_Color = randomColor({
+    luminosity: 'bright',
+    hue: 'random'
+ });
 
 module.exports = async(client, member) =>{
     const roleID = await db.get(`captcha_${member.guild.id}_roleid`);
@@ -14,11 +18,11 @@ module.exports = async(client, member) =>{
         captcha.drawTrace();
         captcha.drawCaptcha();
 
-        
+
         const attachment = new MessageAttachment(await captcha.png, `captcha.png`);
 
         const embed = new MessageEmbed()
-            .setColor('RANDOM')
+            .setColor(radom_Color)
             .setDescription(`โปรดพิมพ์สิ่งที่คุณเห็นในภาพนี้เพื่อยืนยันตัวตน\nโดย \`มีเวลา 45 วินาที\` ในการยืนยันค่ะ`)
             .attachFiles(attachment)
             .setImage('attachment://captcha.png')
@@ -43,19 +47,23 @@ module.exports = async(client, member) =>{
                 member.send(':white_check_mark: การยืนยันตัวตนถูกต้องค่ะ!');
                 if(roleID !== null){
                     let checkrole = member.guild.roles.cache.find(r => r.id === roleID);
-                    if(checkrole){
-                        if(!member.roles.cache.has(checkrole.id)){
-                            await member.roles.add(checkrole.id);
-                            member.send(`:inbox_tray: ได้ทำการเพิ่มยศ ${checkrole.name} ให้เรียบร้อยค่ะ`);
+                    if(member.guild.me.roles.highest.position > checkrole.rawPosition){
+                        if(checkrole){
+                            if(!member.roles.cache.has(checkrole.id)){
+                                await member.roles.add(checkrole.id);
+                                member.send(`:inbox_tray: ได้ทำการเพิ่มยศ ${checkrole.name} ให้เรียบร้อยค่ะ`);
+                            }
                         }
                     }
                 }
                 if(roleRemoveID !== null){
-                    const checkroleremove = member.guild.roles.cache.find(r => r.id === roleRemoveID);
-                    if(checkroleremove){
-                        if(member.roles.cache.has(checkroleremove.id)){
-                            await member.roles.remove(checkroleremove.id);
-                            member.send(`:outbox_tray: ได้ทำการนำยศ ${checkrole.name} ออกเรียบร้อยค่ะ`);
+                    let checkroleremove = member.guild.roles.cache.find(r => r.id === roleRemoveID);
+                    if(member.guild.me.roles.highest.position > checkroleremove.rawPosition){
+                        if(checkroleremove){
+                            if(member.roles.cache.has(checkroleremove.id)){
+                                await member.roles.remove(checkroleremove.id);
+                                member.send(`:outbox_tray: ได้ทำการนำยศ ${checkroleremove.name} ออกเรียบร้อยค่ะ`);
+                            }
                         }
                     }
                 }

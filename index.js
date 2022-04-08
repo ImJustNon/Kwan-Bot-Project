@@ -5,6 +5,7 @@ const { PREFIX } = require('./config');
 const { Token } = require('./config');
 const setting = require('./data/setting.js');
 const bot = new Client({disableMentions: 'everyone'});
+module.exports = bot;
 
 const Enmap = require("enmap");
 const fs = require("fs");
@@ -45,7 +46,7 @@ Levels.setURL(setting.database.mongodburl).then(()=>{
 
  
 
-//============================================================================================================================================================================================================
+//==============================================================================Load Music client==============================================================================================================================
 
 
 //====================================================================================COLLECTIONS REQUIRED ON READY===========================================================================================
@@ -60,7 +61,7 @@ bot.aliases = new Collection();
 
 //============================================================================================INITIALIZING====================================================================================================
 ["aliases", "commands"].forEach(x => bot[x] = new Collection());
-["console", "command", "event", "error"].forEach(x => require(`./handler/${x}`)(bot));
+["error","console", "command", "event"].forEach(x => require(`./handler/${x}`)(bot));
 
 bot.categories = fs.readdirSync("./commands/");
 
@@ -150,6 +151,13 @@ data.on('ready', async() =>{ //wait for quick db connect to database
             }
         }
     });
+    bot.on('guildMemberAdd', async(member) =>{ //Auto Role System
+        let roleCount = await data.get(`autorole_${member.guild.id}_count`);
+        if(roleCount !== null){
+            const AutoRole = require('./autorole/memberadd.js');
+            AutoRole(bot, member);
+        }
+    });
 });
 
 //=========================================================================================MENTION SETTINGS===========================================================================================
@@ -188,8 +196,10 @@ bot.on('message', async message => { //mention
 //============================================================================================================================================================================================================
 bot.login(Token);
 //=====================MUSIC Client========================================
-require("./music/bot");
-module.exports = {
-    bot,
-}
+//require("./music/bot");
+//exports => bot, 
+
+
+require('./music/Music_Client.js')(bot);
+
 

@@ -24,6 +24,7 @@ module.exports = async (bot, message) => {
         } else {
             prefix = fetched
         }
+
         //permission
         const permissionAlertEmbed = new MessageEmbed()
             .setColor('#ff1f53')
@@ -34,6 +35,12 @@ module.exports = async (bot, message) => {
         if(!message.guild.me.hasPermission("ADMINISTRATOR")) return message.channel.send(permissionAlertEmbed).then((msg) =>{
             msg.delete({ timeout : 10000 });
         });
+
+        //music channel
+        const musicChannel = await database.get(`music_${message.guild.id}_channel`);
+        if(message.channel.id == musicChannel){
+            require('../../music/Music_Channel/musicchannel.js')(bot, message);
+        }
 
         //ai chat bot
         const chatbotsetup = await database.get(`chatbot_${message.guild.id}_ch`);
@@ -82,12 +89,12 @@ module.exports = async (bot, message) => {
                     if(check) {
                         if(check.Cmds.includes(commandfile.config.name)) return message.channel.send(`คำส่งนี้ได้ถูกปิดการใช้งานโดย \` ผู้ดูเเล \` เเล้วค่ะ`);
                         
-                        commandfile.run(bot, message, args, ops);
+                        commandfile.run(bot, message, args, prefix, ops);
                         logchannel(bot,message,args,commandfile)
                         console.log(commandfile);
                     }
                     else {   
-                        commandfile.run(bot, message, args, ops);
+                        commandfile.run(bot, message, args, prefix, ops);
                         logchannel(bot,message,args,commandfile)
                         console.log(commandfile);
                     }
@@ -110,12 +117,12 @@ module.exports = async (bot, message) => {
                 if(check) {
                     if(check.Cmds.includes(commandfile.config.name)) return message.channel.send(`คำส่งนี้ได้ถูกปิดการใช้งานโดย \` ผู้ดูเเล \` เเล้วค่ะ`);
                         
-                    commandfile.run(bot, message, args, ops);
+                    commandfile.run(bot, message, args, prefix, ops);
                     logchannel(bot,message,args,commandfile)
                     console.log(commandfile);
                 }
                 else {   
-                    commandfile.run(bot, message, args, ops);
+                    commandfile.run(bot, message, args, prefix, ops);
                     logchannel(bot,message,args,commandfile)
                     console.log(commandfile);
                 }

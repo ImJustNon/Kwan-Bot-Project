@@ -104,7 +104,7 @@ module.exports = {
                             await db.set(`xp_${message.guild.id}_overlay_color`,args[2]);
                             await message.channel.send(':white_check_mark: ได้ทำการตั้งค่าใช้งานเเละตั้งค่าสีเรียบร้อยเเล้วค่ะ');
                             if(args[3]){
-                                if(isNaN(args[3])){
+                                if(!isNaN(args[3])){
                                     if(0 <= parseFloat(args[3]) && 1 <= parseFloat(args[3])){
                                     await db.set(`xp_${message.guild.id}_overlay_visible`,args[3]);
                                     await message.channel.send(':white_check_mark: ได้ทำการตั้งค่าใช้งานเเละตั้งค่าสีเรียบร้อยเเล้วค่ะ');

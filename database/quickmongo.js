@@ -7,8 +7,7 @@ async function connect(){
     db.on("ready", () => {
         console.log(chalk.magenta.bold('[Data-Base]') + chalk.white.bold(" quickmongo Already Connected To MongoDB"));
     });
-    await db.connect();
-	
+    await db.connect();	
 }
 connect()
 

@@ -36,7 +36,7 @@ module.exports = {
 
         if(!args[0]) {
             //-------------------embed-------------------
-            const help = await new Discord.MessageEmbed()
+            const help = new Discord.MessageEmbed()
                 .setColor(Enbed_Color)
                 .setTitle('📋・หน้าต่างช่วยเหลือ')
                 .addField(`:green_circle: เชิญบอท :`,`╰ [เชิญบอท](https://discord.com/api/oauth2/authorize?client_id=${setting.mainbot.ClientID}&permissions=${setting.mainbot.Permission}&scope=bot%20applications.commands)`, false)
@@ -322,6 +322,14 @@ module.exports = {
                 .setFooter('K w a n')
                 .setTimestamp() 
 
+            const autorole = new Discord.MessageEmbed()
+                .setColor(Enbed_Color)
+                .setTitle('คำสั่งเกี่ยวกับตั้งค่าระบบเพิ่มยศอัตโนมัติ')
+                .addField(`${setting.emoji.dash}  |  **\` ${prefix}autorole-add \`**`,`เปิดใช้งานเพิ่มยศอัตโนมัติ`,true)
+                .addField(`${setting.emoji.dash}  |  **\` ${prefix}autorole-remove \`**`,`ปิดใช้งานเพิ่มยศอัตโนมัติ`,true)
+                .setFooter('K w a n')
+                .setTimestamp() 
+
             //  <= If want more add here
 
             //------------------- help buttons-------------------
@@ -413,7 +421,7 @@ module.exports = {
                 .setDescription('[สำหรับดูคำสั่งตั้งค่าระบบเลเวล]')
             let bcaptcha = new MessageMenuOption()
                 .setLabel('ระบบยืนยันตัวตน')
-                .setEmoji('🛡️') 
+                .setEmoji('🛡️')
                 .setValue('captcha')
                 .setDescription('[สำหรับดูคำสั่งตั้งค่าระบบยืนยันตัวตนสมาชิก]')
             let bwelcome = new MessageMenuOption()
@@ -426,13 +434,40 @@ module.exports = {
                 .setEmoji('📤') 
                 .setValue('goodbye')
                 .setDescription('[สำหรับดูคำสั่งระบบข้อความลาสมาชิกที่ออก]')
+            let bautorole = new MessageMenuOption()
+                .setLabel('ระบบเพิ่มยศอัตโนมัติ')
+                .setEmoji('💨') 
+                .setValue('autorole')
+                .setDescription('[สำหรับดูคำสั่งตั้งค่าระบบเพิ่มยศอัตโนมัติ]')
             
             let select = new MessageMenu()
                 .setID('selector')
                 .setPlaceholder('กดเพื่อดูคำสั่งทั้งหมด')
                 .setMaxValues(1)
                 .setMinValues(1)
-                .addOptions(bmain,baboutbot,bgames,bimage,btools,bsearch,bmusic,bmusic_filter,bfun,bnsfw,bmod1,bmod2,bsetup,brandom,bautovoice,bserverstats,bxp,bcaptcha,bwelcome,bgoodbye)
+                .addOptions(
+                    bmain,
+                    baboutbot,
+                    bgames,
+                    bimage,
+                    btools,
+                    bsearch,
+                    bmusic,
+                    bmusic_filter,
+                    bfun,
+                    bnsfw,
+                    bmod1,
+                    bmod2,
+                    bsetup,
+                    brandom,
+                    bautovoice,
+                    bserverstats,
+                    bxp,
+                    bcaptcha,
+                    bwelcome,
+                    bgoodbye,
+                    bautorole,
+                );
 
             //-----------------------------OPTIONS----------------------
             //send private massage - message.author.send
@@ -440,7 +475,7 @@ module.exports = {
             const filter = ( button ) => button.clicker.id === message.author.id;
             let collector = Sendmenu.createMenuCollector(filter, { time : 180000 });
 
-            collector.on("collect", (b, menu) => {   
+            collector.on("collect", (b, menu) =>{   
                 if(b.values[0] == "main") {
                     Sendmenu.edit(help, select, true)
                 }
@@ -501,14 +536,18 @@ module.exports = {
                 else if(b.values[0] == "goodbye") {
                     Sendmenu.edit(goodbye, select, true)
                 }
+                else if(b.values[0] == "autorole") {
+                    Sendmenu.edit(autorole, select, true)
+                }
+                console.log('B ----------------',b)
+                console.log('Menu ----------------', menu)
                 b.reply.defer();
             });
             collector.on("end", (b) => {
                 Sendmenu.edit(`เอ๊ะ!! ดูเหมือนว่าคำสั่งนี้จะหมดเวลาการใช้งานเเล้วน่ะคะ หากต้องการใช้คำสั่งนี้ต่อโปรดพิมพ์ \` ${prefix}help \` อีกครั้งน่ะคะ`).then(msg => {
-                    msg.delete({ timeout : 15000 })
-                })
+                    msg.delete({ timeout : 15000 });
+                });
             });
         }
-
     }
 }

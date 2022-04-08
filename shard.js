@@ -17,6 +17,7 @@ manager.on('shardCreate', async(shard) =>{
     });
     shard.on('ready', async() =>{
         console.log(chalk.white.bold.bgGreen('[Shard-Manager]') + chalk.white.bold(' Launched shard : ') + chalk.blue.bold(shard.id));
+        shard.send({type: "shardId", data: {shardId: shard.id}});
     });
     shard.on('death', async() =>{
         console.log(chalk.white.bold.bgGreen('[Shard-Manager]') + chalk.white.bold(' Died shard : ') + chalk.blue.bold(shard.id));

@@ -1,4 +1,3 @@
-const { PREFIX } = require('../../config.js');
 const { MessageEmbed } = require("discord.js")
 const chalk = require('chalk');
 const setting = require('../../data/setting.js');
@@ -6,13 +5,13 @@ const setting = require('../../data/setting.js');
 
 async function change_status(client) {
 	try {
-		client.user.setActivity(`${PREFIX}help | ${client.guilds.cache.size} เซิฟเวอร์`, { 
+		client.user.setActivity(`${setting.mainbot.Prefix}help | ${client.guilds.cache.size} เซิฟเวอร์`, { 
             type: "STREAMING", url: "https://www.twitch.tv/im_just_non",
 			shardID: shard
 		});
 	} 
 	catch (e) {
-		client.user.setActivity(`${PREFIX}help | ${client.guilds.cache.size} เซิฟเวอร์`, {
+		client.user.setActivity(`${setting.mainbot.Prefix}help | ${client.guilds.cache.size} เซิฟเวอร์`, {
             type: "STREAMING", url: "https://www.twitch.tv/im_just_non",
 			shardID: 0
 		});
@@ -34,4 +33,16 @@ module.exports = async bot => {
 	await require('../../database/connect.js')();
 	await require('../../database/quickmongo.js'); //quickmongo
 	if(setting.website.enable) await require('../../website/server.js')(bot);
+
+
+	//=================== post status =============================
+	const CHANNEL = bot.channels.cache.get(setting.mainbot.online_log_channel);
+	if(CHANNEL){
+		const embedLog = new MessageEmbed()
+			.setColor('#1aff00')
+			.setDescription(`:signal_strength: | ${bot.user.tag} Is Now Online`)
+			.setFooter('k w a n')
+			.setTimestamp()
+		CHANNEL.send(embedLog);
+	}
 };
