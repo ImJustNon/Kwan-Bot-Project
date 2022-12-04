@@ -3,6 +3,7 @@ const { MessageEmbed } = require('discord.js');
 const db = require('../../database/quickmongo.js');
 const quickdb = require('quick.db');
 const { PREFIX } = require('../../config.js');
+const { arg } = require('mathjs');
 
 
 module.exports = {
@@ -27,6 +28,7 @@ module.exports = {
         const roleID = await db.get(`captcha_${message.guild.id}_roleid`);
         const roleRemoveID = await db.get(`captcha_${message.guild.id}_roleremoveid`);
         const guildLogCh = await db.get(`captcha_${message.guild.id}_guildlogch`);
+        const timeOut = await db.get(`captcha_${message.guild.id}_timeout`);
         const checkRole = message.guild.roles.cache.find(r => r.id === roleID);
         const checkRoleRemove = message.guild.roles.cache.find(r => r.id === roleRemoveID);
         const checkGuildLogCh = message.guild.channels.cache.get(guildLogCh);
@@ -46,6 +48,7 @@ module.exports = {
             .addField(`:gear: เพิ่มยศอัตโนมัติ : ${role || '\❌ ยังไม่ได้ตั้งค่า'}`,`\` ${prefix}captcha-config -role  < ยศที่ต้องการ > \``, false)
             .addField(`:gear: นำยศออกอัตโนมัติ : ${roleRemove || '\❌ ยังไม่ได้ตั้งค่า'}`,`\` ${prefix}captcha-config -removerole  < ยศที่ต้องการ > \``, false)
             .addField(`:gear: ช่องเเจ้งเตือน : ${guildLog || '\❌ ยังไม่ได้ตั้งค่า'}`,`\` ${prefix}captcha-config -log  < ช่องที่ต้องการ > \``, false)
+            .addField(`:gear: เวลาเหลือ : ${timeOut || '\❌ ยังไม่ได้ตั้งค่า'}`,`\` ${prefix}captcha-config -timeout  < เวลา(วินาที)(30 - 120) > \``, false)
             .addField(`:recycle: ลบการตั้งค่า :`,`\` ${prefix}captcha-config -remove  < ตั้งค่าที่ต้องการลบ > \``, false)
             .setFooter('K w a n')
             .setTimestamp()
@@ -80,6 +83,17 @@ module.exports = {
 
             await db.set(`captcha_${message.guild.id}_guildlogch`,getguildlogch.id).then(() =>{
                 message.channel.send(`:white_check_mark: ทำการตั้งค่าช่อง \` ${getguildlogch.name} \` เรียบร้อยเเล้วค่ะ`);
+            });
+        }
+        else if(args[0].toLowerCase() === "-timeout"){
+            if(!args[1]) return message.lineReplyNoMention('โปรดระบุเวลาที่ต้องการด้วยน่ะคะ');
+            if(isNaN(args[1])) return message.lineReplyNoMention('คุณสามารถระบุได้เฉพาะตัวเลขเท่านั้นน่ะคะ');
+            if(Number(args[1]) === args[1] && args[1] % 1 !== 0) return message.lineReplyNoMention('คุณสามารถระบุได้เฉพาะตัวเลขที่เป็นจำนวนเต็มเท่านั้นน่ะคะ');
+            if(Number(args[1]) < 30) return message.lineReplyNoMention(`คุณไม่สามารถตั้งค่าเวลาได้น้อยกว่า**\`30 วินาที\`**ได้น่ะคะ`);
+            if(Number(args[1]) > 120) return message.lineReplyNoMention(`คุณไม่สามารถตั้งค่าเวลาได้มากกว่า**\`120 วินาที หรือ มากกว่า 2 นาทีได้น่ะคะ\`**ได้น่ะคะ`);
+
+            await db.set(`captcha_${message.guild.id}_timeout`, Number(args[1])).then(() =>{
+                message.channel.send(`:white_check_mark: ได้ทำการตั้งค่าเวลาเป็น \` ${args[1]} วินาที \`เรียบร้อยเเล้วค่ะ`);
             });
         }
         else if(args[0].toLowerCase() === '-remove'){

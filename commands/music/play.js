@@ -8,6 +8,10 @@ module.exports = {
     },
     run: async(client, message, args, prefix) =>{
         let channel = message.member.voice.channel;
+
+        const musicChannel = await database.get(`music_${message.guild.id}_channel`);
+        if(musicChannel === null) return message.lineReplyNoMention(`:warning: โปรคตั้งค่าช่องสำหรับเล่นเพลงก่อนน่ะคะ ใช้\` ${prefix}music-setup \``);
+
         if(!args[0]) return message.lineReplyNoMention('โปรดระบุเพลงที่ต้องการจะให้เล่นด้วยน่ะคะ');
         
         if(!channel){

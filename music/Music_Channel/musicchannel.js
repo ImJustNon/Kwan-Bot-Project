@@ -25,6 +25,7 @@ module.exports = async(client, message) =>{
     if(!musicChannel) return;
     if(!supportMessage) return;
     if(!trackMessage) return;
+	if(!queueMessage) return;
 
 
     if(!channel){  

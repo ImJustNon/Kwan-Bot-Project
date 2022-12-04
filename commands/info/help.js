@@ -539,8 +539,6 @@ module.exports = {
                 else if(b.values[0] == "autorole") {
                     Sendmenu.edit(autorole, select, true)
                 }
-                console.log('B ----------------',b)
-                console.log('Menu ----------------', menu)
                 b.reply.defer();
             });
             collector.on("end", (b) => {

@@ -37,7 +37,7 @@ module.exports = {
         const MESSAGE = await message.channel.send(embed,row)
         const filter = ( button ) => button.clicker.id === message.author.id
         const collector = MESSAGE.createButtonCollector(filter, { time : 30000 });
-        collector.on('collect', async (b)  => {
+        collector.on('collect', async (b) => {
             if(b.id == 'yes'){
                 disableMusic()
                 await MESSAGE.delete();

@@ -11,6 +11,7 @@ module.exports = async(client, member) =>{
     const roleID = await db.get(`captcha_${member.guild.id}_roleid`);
     const roleRemoveID = await db.get(`captcha_${member.guild.id}_roleremoveid`);
     const guildLogCh = await db.get(`captcha_${member.guild.id}_guildlogch`);
+    const timeOut = (await db.get(`captcha_${member.guild.id}_timeout`)) || 45;
     if(member.user.bot == false){
         const captcha = new Captcha();
         captcha.async = true;
@@ -23,7 +24,7 @@ module.exports = async(client, member) =>{
 
         const embed = new MessageEmbed()
             .setColor(radom_Color)
-            .setDescription(`โปรดพิมพ์สิ่งที่คุณเห็นในภาพนี้เพื่อยืนยันตัวตน\nโดย \`มีเวลา 45 วินาที\` ในการยืนยันค่ะ`)
+            .setDescription(`โปรดพิมพ์สิ่งที่คุณเห็นในภาพนี้เพื่อยืนยันตัวตน\nโดย \`มีเวลา ${String(timeOut)} วินาที\` ในการยืนยันค่ะ`)
             .attachFiles(attachment)
             .setImage('attachment://captcha.png')
             .setFooter('K w a n')
@@ -40,7 +41,7 @@ module.exports = async(client, member) =>{
         try{
             const response = await msg.channel.awaitMessages(filter,{
                 max: 1,
-                time: 45000,
+                time: parseInt(timeOut) * 1000,
                 errors: ["time"],
             });
             if(response){

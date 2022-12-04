@@ -1,7 +1,7 @@
 {
   "name": "discord-moderation-bot",
   "version": "2.0.0",
-  "description": "",
+  "description": "use node v16.9.0",
   "main": "index.js",
   "dependencies": {
     "@cicciosgamino/openweather-apis": "^5.2.0",
@@ -135,10 +135,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "music": "node ./music/bot.js",
-    "main": "node shard.js",
+    "main": "node index.js",
     "webserver": "node ./website/test.js",
-    "lavalink": "java -jar ./lavalink/Lavalink.jar"
+    "lavalink": "java -jar ./lavalink/Lavalink.jar",
+	"start": "node shard.js"
   },
   "author": "Manav Garg",
   "license": "ISC"

@@ -61,7 +61,7 @@ bot.aliases = new Collection();
 
 //============================================================================================INITIALIZING====================================================================================================
 ["aliases", "commands"].forEach(x => bot[x] = new Collection());
-["error","console", "command", "event"].forEach(x => require(`./handler/${x}`)(bot));
+["console", "command", "event"].forEach(x => require(`./handler/${x}`)(bot));
 
 bot.categories = fs.readdirSync("./commands/");
 

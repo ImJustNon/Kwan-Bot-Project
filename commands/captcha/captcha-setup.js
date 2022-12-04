@@ -36,9 +36,10 @@ module.exports = {
         const collector = MESSAGE.createButtonCollector(filter, { time : 30000 });
         collector.on('collect', async (b)  => {
             if(b.id == 'yes'){
-                await db.set(`captcha_${message.guild.id}_activate`, 'true').then(() =>{
-                    message.channel.send(':white_check_mark: ทำการตั้งค่าระบบยืนยันตัวตนเสร็จเรียบร้อยเเล้วค่ะ');
-                    MESSAGE.delete();
+                await db.set(`captcha_${message.guild.id}_activate`, 'true').then(async() =>{
+                    await db.set(`captcha_${message.guild.id}_timeout`, 45);
+                    await message.channel.send(':white_check_mark: ทำการตั้งค่าระบบยืนยันตัวตนเสร็จเรียบร้อยเเล้วค่ะ');
+                    await MESSAGE.delete();
                 });
             }
             if(b.id == 'no'){

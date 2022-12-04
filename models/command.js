@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-let Schema = new mongoose.Schema({
+let Schema = new Schema({
     Guild: String,
     Cmds: Array
 });
 
-module.exports = mongoose.model('cmds',Schema);
+module.exports = model('example',Schema);

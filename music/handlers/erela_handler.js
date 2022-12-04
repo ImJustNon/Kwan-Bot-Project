@@ -19,6 +19,7 @@ module.exports = async(client) =>{
         let trackEmbedID = await db.get(`music_${player.guild}_track_message`);
         let queueMessageID = await db.get(`music_${player.guild}_queue_message`);
 
+
         let musicChannel = client.channels.cache.get(musicChannelID);
         let trackEmbed = await musicChannel.messages.cache.get(trackEmbedID);
         let queueMessage = await musicChannel.messages.fetch(queueMessageID);
