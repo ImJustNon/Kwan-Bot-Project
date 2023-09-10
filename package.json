@@ -134,6 +134,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "main": "node index.js",
     "webserver": "node ./website/test.js",

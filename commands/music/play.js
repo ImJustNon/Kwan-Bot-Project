@@ -1,5 +1,5 @@
 const manager = require('../../music/handlers/manager.js');
-
+const database = require('../../database/quickmongo.js');
 module.exports = {
     config: {
         name: 'play',

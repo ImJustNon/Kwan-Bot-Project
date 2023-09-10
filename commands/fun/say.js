@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const { getAudioUrl, getAllAudioUrls } = require('google-tts-api');
-const voice = require("@discordjs/voice");
+require("@discordjs/voice");
 const { waitForDebugger } = require('inspector');
 const DetectLanguage = require('detectlanguage');
 const setting = require('../../data/setting.js');
@@ -32,18 +32,18 @@ module.exports = {
         const text = args.join(' ');
 
         detectlanguage.detect(text).then(async(result) =>{
+            if(result.length === 0) return message.lineReplyNoMention("💢 พิมพ์ให้มันเป็นภาษาหน่อยสิ !");
             let audioUrl = getAllAudioUrls(text,{
                 lang: result[0].language,
                 slow: false,
                 host: 'https://translate.google.com',
                 timeout: 10000,
             });
-        
+
             try{
-                let i;
-                for(i = 0; i < audioUrl.length; i++){
-                    let wait = false
-                    const msg = await message.lineReplyNoMention(new MessageEmbed().setColor('#2dfa25').setDescription(`:microphone2: กำลังพูดว่า\n\`\`\`${audioUrl[i].shortText}\`\`\``).setFooter('K w a n').setTimestamp());
+                for(let i = 0; i < audioUrl.length; i++){
+                    let wait = false;
+                    let msg = await message.lineReplyNoMention(new MessageEmbed().setColor('#2dfa25').setDescription(`:microphone2: กำลังพูดว่า\n\`\`\`${audioUrl[i].shortText}\`\`\``).setFooter('K w a n').setTimestamp());
                     await voiceChannel.join().then(async(connection) =>{
                         msg.react('🎙️').catch(()=>{});
                         const dispather = await connection.play(audioUrl[i].url);

@@ -1,7 +1,7 @@
 module.exports = {
     mainbot:{
         Prefix: 'k/',
-        Token: 'OTMzNjYyODQ1OTA2ODYyMTEw.YekzSQ.uqXhmWXxZKItrKXEmzPXd3zNiac',
+        Token: 'OTMzNjYyODQ1OTA2ODYyMTEw.GkyV5W.c67T6vYxR7pI2vX3CRAjg0RlOsNHLFknAYY-k4',
         Permission: '8', //150314937471
         OwnerID: '708965153131200594',
         ClientID: '933662845906862110',
@@ -102,13 +102,22 @@ module.exports = {
         nodes: [ 
             {
                 id: 'main',
-                host: '203.78.129.233',
-                port: 2333,
+                host: 'lavalink-replit-1.nonnyha5.repl.co',
+                port: 443 ,
+                password: 'maybeiwasboring',
+                secure: true,
+                retryAmount : Infinity,
+                retryDelay : 3000,
+            },
+            /*{
+                id: '22222',
+                host: '45.141.26.82',
+                port: 2333 ,
                 password: 'reirin',
                 secure: false,
                 retryAmount : Infinity,
                 retryDelay : 3000,
-            },
+            },*/
         ],
         spotify: {
             enable: false,

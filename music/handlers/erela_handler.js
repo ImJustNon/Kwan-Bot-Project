@@ -19,9 +19,8 @@ module.exports = async(client) =>{
         let trackEmbedID = await db.get(`music_${player.guild}_track_message`);
         let queueMessageID = await db.get(`music_${player.guild}_queue_message`);
 
-
         let musicChannel = client.channels.cache.get(musicChannelID);
-        let trackEmbed = await musicChannel.messages.cache.get(trackEmbedID);
+        let trackEmbed = await musicChannel.messages.fetch(trackEmbedID);
         let queueMessage = await musicChannel.messages.fetch(queueMessageID);
 
 
@@ -77,7 +76,7 @@ module.exports = async(client) =>{
         let row2 = new MessageActionRow()
             .addComponents(bvolumedown,bvolumeup,bmute)*/
         await trackEmbed.edit(editEmbed);
-        await queueMessage.edit(`${Queue_message}`);
+        await queueMessage.edit(Queue_message);
         
 
     });
@@ -87,8 +86,8 @@ module.exports = async(client) =>{
         let queueMessageID = await db.get(`music_${player.guild}_queue_message`);
 
         let musicChannel = client.channels.cache.get(musicChannelID);
-        let trackEmbed = await musicChannel.messages.cache.get(trackEmbedID);
-        let queueMessage = await musicChannel.messages.cache.get(queueMessageID);
+        let trackEmbed = await musicChannel.messages.fetch(trackEmbedID);
+        let queueMessage = await musicChannel.messages.fetch(queueMessageID);
         
         const editEmbed = new MessageEmbed()
             .setColor(setting.music.config.embedColor)
